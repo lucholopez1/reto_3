@@ -1,6 +1,6 @@
 # reto_3
 
-classDiagram
+    classDiagram
     MenuItem <|-- Beverage
     MenuItem <|-- Appetizer
     MenuItem <|-- MainCourse
