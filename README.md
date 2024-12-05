@@ -1,6 +1,6 @@
 # reto_3
-
-    classDiagram
+```mermaid
+classDiagram
     MenuItem <|-- Beverage
     MenuItem <|-- Appetizer
     MenuItem <|-- MainCourse
