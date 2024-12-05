@@ -33,9 +33,10 @@ classDiagram
         +aplicar_descuento(Float discount_percentage)
     }
 ```
-```python
 - Once I had the idea, started developing the code in visual studio:
 import math
+```python
+
 
 
 class Point:
