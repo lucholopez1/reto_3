@@ -92,3 +92,52 @@ print(f"longitud: {linea1.length}")
 print(f"pendiente: {linea1.slope}")
 print(f"cruza eje x: {linea1.compute_horizontal_cross()}")
 print(f"cruza eje y: {linea1.compute_vertical_cross()}")
+```
+- Then it was time to work in the real challenge, so I started overthinking and i have to admit that i procrastinated a little bit this part of the assignment, but here is the code:
+
+  
+```python
+class MenuItem:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def calculate_total_price(self):
+        return self.price
+
+
+class Beverage(MenuItem):
+    def __init__(self, name, price, size):
+        super().__init__(name, price)
+        self.size = size
+
+
+class Appetizer(MenuItem):
+    def __init__(self, name, price, portion):
+        super().__init__(name, price)
+        self.portion = portion
+
+
+class MainCourse(MenuItem):
+    def __init__(self, name, price, cooking_level):
+        super().__init__(name, price)
+        self.cooking_level = cooking_level
+
+
+class Order:
+    def __init__(self):
+        self.items = []
+
+    def add_item(self, item):
+        self.items.append(item)
+
+    def calculate_total_bill(self):
+        total = sum(item.calculate_total_price() for item in self.items)
+        return total
+    
+    def apply_discount(self, discount_percentage):
+        total = self.calculate_total_bill()
+        discount_amount = total * (discount_percentage / 100)
+        return total - discount_amount
+```
+That´s all folks!
