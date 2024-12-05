@@ -1,4 +1,7 @@
 # reto_3
+
+- The first thing I did was making the class diagram of the exercise in mermaid:
+
 ```mermaid
 classDiagram
     MenuItem <|-- Beverage
